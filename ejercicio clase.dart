@@ -5,7 +5,7 @@ void main(){
 
   final Map<String,dynamic> mapaCats={
   'id':[1,2,3],
-  'categoria':['Electronica','Ropa','Comida'], 
+  'categoria':['Dance','Ropa','Comida'], 
   };
 
   final Map <String, dynamic> mapaProds={
