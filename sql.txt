@@ -11,3 +11,5 @@ constraint FK_categoryID foreign key (category_id) references category(id_catego
 
 use diagnostico;
 insert into category (id_category, name) values (1, 'Ropa');
+
+drop database diagnostico;
