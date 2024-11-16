@@ -1,19 +1,19 @@
-import { AlertDialog, Menu, Popover, Tooltip, Modal, Box, VStack, Text, Pressable, HStack, Icon, Divider, Center, useColorModeValue, Switch, Button } from 'native-base';
+import { AlertDialog, Menu, Popover, Tooltip, Modal, Box, VStack, Text, Pressable, HStack, Icon, Divider, Center, useColorModeValue, Switch, Button, Badge } from 'native-base';
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
 
 const ConfigurationScreen = () => {
-    const [isNotificationsEnabled, setIsNotificationsEnabled] = React.useState(false); // Estado para el Switch
+    const [isNotificationsEnabled, setIsNotificationsEnabled] = React.useState(false); 
     const [isOpNotfications, setIsOpNotifications] = React.useState(false);
     const [showModal, setShowModal] = React.useState(false);
     const [isDeleteAlertifEnabled, setDeleteAlertEnabled] = React.useState(false);
 
     const toggleSwitch = () => {
-        // Toggle to opposite of current value
+        
         setIsNotificationsEnabled(prev => !prev);
-        // If enabling notifications
+        
         if (!isNotificationsEnabled) {
             setIsOpNotifications(true);
         }
@@ -25,7 +25,7 @@ const ConfigurationScreen = () => {
 
     const bgColor = useColorModeValue('coolGray.100', 'coolGray.800');
     const textColor = useColorModeValue('light.text.900', 'dark.text.100');
-    const iconColor = useColorModeValue('light.icon.900', 'dark.icon.100');
+    const iconColor = useColorModeValue('dar.icon.200', 'white');
     const boxColor = useColorModeValue('white', 'coolGray.700');
     const borderColor = useColorModeValue('muted.300', 'darkBlue.800');
     return (
@@ -56,11 +56,7 @@ const ConfigurationScreen = () => {
                         >
                             <Text fontSize="md">Notificaciones</Text>
                             <Switch
-                                offTrackColor="indigo.100"
-                                onTrackColor="indigo.200"
-                                onThumbColor="indigo.500"
-                                offThumbColor="indigo.50"
-                                onValueChange={toggleSwitch}  // Changed from onToggle
+                                onValueChange={toggleSwitch}  
                                 isChecked={isNotificationsEnabled}
                             />
                         </HStack>
@@ -83,7 +79,7 @@ const ConfigurationScreen = () => {
                         </AlertDialog>
                         <Popover trigger={triggerProps => {
                             return <Pressable {...triggerProps}>
-                                <Icon as={MaterialIcons} name="info-outline" size="md" />
+                                <Icon as={MaterialIcons} name="info-outline" size="md" color={iconColor} />
                             </Pressable>;
                         }}>
                             <Popover.Content accessibilityLabel="Información" w="130"
@@ -103,7 +99,7 @@ const ConfigurationScreen = () => {
                         <Text fontSize="md">Opciones avanzadas</Text>
                         <Menu shadow={2} w="190" trigger={triggerProps => {
                             return <Pressable accessibilityLabel="More options menu" {...triggerProps}>
-                                <Icon as={MaterialIcons} name="more-vert" size="md" />
+                                <Icon as={MaterialIcons} name="more-vert" size="md" color={iconColor} />
                             </Pressable>;
                         }}>
                             <Menu.Item>Historial</Menu.Item>
@@ -152,21 +148,23 @@ const ConfigurationScreen = () => {
                             placement='left'
                         >
                             <Pressable>
-                                <Icon as={MaterialIcons} name="help-outline" size="md" />
+                                <Icon as={MaterialIcons} name="help-outline" size="md" color={iconColor} />
                             </Pressable>
                         </Tooltip>
                     </HStack>
                     <Divider />
-                    {/* Detalles adicionales */}
+
+                    {/*para segundo dia*/}
+                    {/* Detalles adicionales WIP */}
                     <Pressable>
                         <Text fontSize="md" color="blue.500">
-                            Detalles adicionales
+                            Detalles adicionales <Badge bg={"blue.500"} borderRadius={20}>WIP</Badge>
                         </Text>
                     </Pressable>
                     {/* Aquí irá el Modal */}
 
 
-                    {/* Eliminar cuenta */}
+                    
                     <Pressable
                         bg="danger.600"
                         rounded="lg"
