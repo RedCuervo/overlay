@@ -13,3 +13,4 @@ Debería funcionar correctamente en el navegador.
 
 ⚠️ Importante: Existe la posibilidad de que no funcione en la versión mas reciente de expo go
 
+`No deberia ser necesario agregar dependencias`
