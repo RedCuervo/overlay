@@ -9,4 +9,5 @@
    npx expo start
 Nota:
 Debería funcionar correctamente en el navegador.
+
 ⚠️ Importante: Existe la posibilidad de que no funcione en la versión m
