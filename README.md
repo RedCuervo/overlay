@@ -15,5 +15,5 @@ color="red"
 <blockquote>
   Deberia funcionar correctamente en navegador
   <br>
-  <p style="">Existe la posibilidad de que no funcione en la version mas reciente de expo go</p>
+  <p style="important">Existe la posibilidad de que no funcione en la version mas reciente de expo go</p>
 </blockquote>
