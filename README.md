@@ -1,8 +1,8 @@
-<Style>
+<style>
 .important{
 color="red"
 }
-</Style>
+</style>
 
 <H1>Overlay</H1>
 <H2>Que hacer?</H2>
