@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
 <style>
 .important{
 color="red"
 }
 </style>
-
+  </head>
 <H1>Overlay</H1>
 <H2>Que hacer?</H2>
 <ol>
@@ -17,3 +20,4 @@ color="red"
   <br>
   <p style="important">Existe la posibilidad de que no funcione en la version mas reciente de expo go</p>
 </blockquote>
+</html>
