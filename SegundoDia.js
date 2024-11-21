@@ -20,7 +20,7 @@ se agregan los multimodales, justo despues de pressable con texto "Detalles Adic
 //boton para abrir el multimodal (este ya se encuentra en el codigo)
                     <Pressable onPress={() => setIsMenuModalOpen(true)}>  //Se agrega onpress para abir los multimodales
                         <Text fontSize="md" color="blue.500">
-                            Detalles adicionales <Badge bg={"blue.500"} borderRadius={20}>WIP</Badge>
+                            Detalles adicionales
                         </Text>
                     </Pressable>
       //Modales(van justo despues del pressable)
